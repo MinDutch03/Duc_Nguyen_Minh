@@ -22,7 +22,7 @@ A RESTful API built with Express.js and TypeScript that provides CRUD operations
 1. Clone the repository:
    ```
    git clone https://github.com/MinDutch03/Duc_Nguyen_Minh.git
-   cd problem_5
+   cd Problem_5
    ```
 
 2. Install dependencies:
@@ -34,6 +34,52 @@ A RESTful API built with Express.js and TypeScript that provides CRUD operations
    ```
    PORT=8080
    MONGODB_URI=mongodb://localhost:27017/resource_db
+   ```
+
+## Database Setup
+
+### Option 1: Using the seed script
+
+The project includes a database seed script that populates MongoDB with sample resources:
+
+```
+npm run seed
+```
+
+This will:
+1. Connect to your configured MongoDB database
+2. Clear any existing resources
+3. Insert 8 sample resources across different categories
+
+### Option 2: Manual setup
+
+You can also manually create the database:
+
+1. Start MongoDB:
+   ```
+   mongod
+   ```
+
+2. Connect to MongoDB using the mongo shell:
+   ```
+   mongosh
+   ```
+
+3. Create and use the database:
+   ```
+   use resource_db
+   ```
+
+4. Create a sample document:
+   ```javascript
+   db.resources.insertOne({
+     name: "MacBook Pro",
+     description: "High-performance laptop with M2 chip",
+     category: "electronics",
+     status: "available",
+     createdAt: new Date(),
+     updatedAt: new Date()
+   })
    ```
 
 ## Running the Application
@@ -107,6 +153,19 @@ curl -X POST http://localhost:8080/api/resources \
 
 ```bash
 curl http://localhost:8080/api/resources
+```
+
+### Get Resources with Filtering
+
+```bash
+# Get all electronics
+curl http://localhost:8080/api/resources?category=electronics
+
+# Get available books
+curl http://localhost:8080/api/resources?category=books&status=available
+
+# Search by name (case-insensitive partial match)
+curl http://localhost:8080/api/resources?name=mac
 ```
 
 ### Get a Specific Resource
