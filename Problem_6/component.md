@@ -10,18 +10,18 @@ graph TB
     CacheManager[Cache Manager]
     DB[(Database)]
     
-    Client -->|1. Score Update Request| APIGateway
-    APIGateway -->|2. Validate Request| AuthService
-    APIGateway -->|3. Forward Request| ScoreService
+    Client -->|1.Score Update Request| APIGateway
+    APIGateway -->|2.Validate Request| AuthService
+    APIGateway -->|3.Forward Request| ScoreService
     
     subgraph "Score Service Module"
-        ScoreService -->|4. Check Rate Limits| RateLimiter
-        ScoreService -->|5. Update Score| DB
-        ScoreService -->|6. Fetch/Update Leaderboard| CacheManager
-        ScoreService -->|7. Broadcast Updates| WebSocketManager
+        ScoreService -->|4.Check Rate Limits| RateLimiter
+        ScoreService -->|5.Update Score| DB
+        ScoreService -->|6.Fetch/Update Leaderboard| CacheManager
+        ScoreService -->|7.Broadcast Updates| WebSocketManager
     end
     
-    WebSocketManager -->|8. Real-time Updates| Client
+    WebSocketManager -->|8.Real-time Updates| Client
     CacheManager -.->|Cached Reads| DB
     
     classDef primary fill:#d73a4a,stroke:#333,stroke-width:2px,color:white
