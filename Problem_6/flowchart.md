@@ -1,3 +1,4 @@
+# Flowchart Diagram
 ```mermaid
 flowchart TB
     Start([Client Action Completed]) --> A[Send Score Update Request]
