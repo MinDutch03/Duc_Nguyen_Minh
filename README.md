@@ -2,7 +2,7 @@
 
 This README outlines three distinct problem areas addressed in our projects, along with their corresponding solutions and implementation details.
 
-## Problem 1: Summation to n - Algorithm Efficiency Analysis
+## Problem 4: Summation to n - Algorithm Efficiency Analysis
 
 ### Problem Description
 Finding the sum of integers from 1 to n using different algorithmic approaches.
@@ -29,7 +29,7 @@ Finding the sum of integers from 1 to n using different algorithmic approaches.
 ### Recommendation
 The mathematical formula implementation is superior for performance, especially with large input values.
 
-## Problem 2: RESTful CRUD API with Express and TypeScript
+## Problem 5: RESTful CRUD API with Express and TypeScript
 
 ### Problem Description
 Building a robust, type-safe API for resource management with filtering, validation, and complete testing coverage.
@@ -54,7 +54,7 @@ Building a robust, type-safe API for resource management with filtering, validat
   - DELETE `/api/resources/:id` - Delete resource
 - **Testing**: Jest with MongoDB memory server for isolated testing
 
-## Problem 3: Score Service for Real-time Leaderboard System
+## Problem 6: Score Service for Real-time Leaderboard System
 
 ### Problem Description
 Creating a secure, scalable service to handle user score updates and maintain a real-time leaderboard with anti-fraud protections.
