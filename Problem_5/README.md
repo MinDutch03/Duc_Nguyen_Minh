@@ -39,6 +39,7 @@ A RESTful API built with Express.js and TypeScript that provides CRUD operations
    ```
 
 ## Project structure
+```bash
 Problem_5/
 │
 ├── src/                          # Source code directory
@@ -78,6 +79,7 @@ Problem_5/
 ├── tsconfig.json                 # TypeScript configuration
 ├── jest-config.js                # TypeScript and test coverage settings
 └── README.md                     # Project documentation
+```
 
 
 ## Database Setup
