@@ -59,7 +59,7 @@ Problem_5/
 │   ├── middleware/               # Custom middleware
 │   │   └── validation.middleware.ts # Input validation
 │   │
-│   ├── __tests__/                # Test directory
+│   ├── tests/                # Test directory
 │   │   ├── controllers/          # Controller unit tests
 │   │   │   └── resource_controller_test.ts
 │   │   ├── middleware/           # Middleware unit tests
@@ -247,11 +247,11 @@ npm test
 
 ### Test Files Structure
 
-Tests are located in the `src/__tests__` directory, mirroring the structure of the source code:
+Tests are located in the `src/tests` directory, mirroring the structure of the source code:
 
 ```
 src/
-└── __tests__/
+└── tests/
     ├── controllers/
     │   └── resource_controller_test.ts
     ├── middleware/
