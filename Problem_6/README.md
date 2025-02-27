@@ -15,6 +15,7 @@ The Score Service module is responsible for handling user score updates and main
 - Caching mechanism for efficient scoreboard retrieval
 - Rate limiting to prevent abuse
 - Incremental WebSocket updates for improved performance
+- Fraud detection and anomaly monitoring
 - Regional deployment support for low latency
 
 ## Architecture
@@ -26,6 +27,7 @@ The Score Service module is part of the backend application server and interacts
 3. **Scoreboard Manager**: Maintains and updates the top 10 leaderboard
 4. **WebSocket Service**: Pushes real-time updates to connected clients
 5. **Rate Limiter**: Prevents abuse of the score update API
+6. **Fraud Detection System**: Identifies suspicious patterns and anomalies
 7. **Cache Hierarchy**: Multi-level caching for optimal performance
 
 For a visual representation of these components and their interactions, please refer to the [Component Diagram](./component.md).
@@ -75,7 +77,7 @@ POST /api/v1/scores/update
 - 403 Forbidden: User not authorized to update scores
 - 429 Too Many Requests: Rate limit exceeded
 
-For the complete process flow of score updates, see the [Flow Chart Diagram](./score-service-flowchart.md).
+For the complete process flow of score updates, see the [Flow Chart Diagram](./flowchart.md).
 
 ### Get Top Scoreboard
 ```
@@ -151,7 +153,7 @@ GET /api/v1/scores/context/{userId}
 }
 ```
 
-For a detailed view of the communication sequence, see the [Sequence Diagram](./score-service-sequence.md).
+For a detailed view of the communication sequence, see the [Sequence Diagram](./sequence.md).
 
 ## Authentication & Security
 The Score Service implements the following security measures:
@@ -222,7 +224,7 @@ primary key (user_id, achievement_id)
 6. Check if the top 10 leaderboard needs updating
 7. Broadcast incremental updates via WebSocket if necessary
 
-The complete update process is illustrated in the [Flow Chart Diagram](./score-service-flowchart.md) and [Sequence Diagram](./score-service-sequence.md).
+The complete update process is illustrated in the [Flow Chart Diagram](./flowchart.md) and [Sequence Diagram](./sequence.md).
 
 ### Performance Considerations
 - Implement a cache hierarchy:
@@ -247,7 +249,7 @@ The complete update process is illustrated in the [Flow Chart Diagram](./score-s
   - Shard by user ID ranges
   - Implement "hot" database for active users and "cold" storage for inactive ones
 
-The component architecture supporting these considerations is detailed in the [Component Diagram](./score-service-component.md).
+The component architecture supporting these considerations is detailed in the [Component Diagram](./component.md).
 
 ## Unit Testing
 
