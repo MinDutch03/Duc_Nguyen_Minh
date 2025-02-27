@@ -1,4 +1,5 @@
 # Component Diagram
+```mermaid
 graph TB
     Client[Client Application]
     APIGateway[API Gateway]
@@ -30,3 +31,4 @@ graph TB
     class ScoreService,WebSocketManager,RateLimiter,CacheManager primary
     class APIGateway,AuthService secondary
     class Client,DB external
+```
