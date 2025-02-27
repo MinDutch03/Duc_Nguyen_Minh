@@ -1,6 +1,6 @@
 # Project Problems Overview
 
-This README outlines three distinct problem areas addressed in our projects, along with their corresponding solutions and implementation details.
+This README outlines three distinct problem areas addressed in my project, along with their corresponding solutions and implementation details.
 
 ## Problem 4: Summation to n - Algorithm Efficiency Analysis
 
