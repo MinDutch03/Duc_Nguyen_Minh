@@ -31,4 +31,3 @@ graph TB
     class ScoreService,WebSocketManager,RateLimiter,CacheManager primary
     class APIGateway,AuthService secondary
     class Client,DB external
-```
