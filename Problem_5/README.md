@@ -18,46 +18,6 @@ A RESTful API built with Express.js and TypeScript that provides CRUD operations
 - MongoDB (local or Atlas)
 - npm or yarn
 
-## Project structure
-Problem_5/
-│
-├── src/                          # Source code directory
-│   ├── app.ts                    # Express application setup
-│   ├── server.ts                 # Server entry point
-│   ├── config/                   # Configuration files
-│   │   └── db.config.ts          # Database connection configuration
-│   │
-│   ├── controllers/              # Request handlers
-│   │   └── resource.controller.ts # Resource CRUD operations
-│   │
-│   ├── models/                   # Database models
-│   │   └── resource.model.ts     # Resource schema and interface
-│   │
-│   ├── routes/                   # API routes
-│   │   └── resource.routes.ts    # Resource endpoints
-│   │
-│   └── middleware/               # Custom middleware
-│   │   └── validation.middleware.ts # Input validation
-│   └── __tests__/                # Test
-│   │	 └── controllers/
-│   │   │	  └── resource_controller_test.ts
-│   │   └── middleware/
-│   │   │	 └── validation_middleware_test.ts
-│   │   │
-│   │	 └── routes/
-│   │        └── resource_routes_test.ts
-├── dist/                         # Compiled JavaScript output (generated after build)
-│
-├── node_modules/                 # Node.js dependencies (generated after npm install)
-│
-├── .env                          # Environment variables (to be created)
-├── .env.example                  # Example environment variables
-├── .gitignore                    # Git ignore file
-├── package.json                  # Project metadata and dependencies
-├── tsconfig.json                 # TypeScript configuration
-├── jest-config.js                # TypeScript and test coverage settings
-└── README.md                     # Project documentation
-
 
 ## Installation
 
@@ -77,6 +37,48 @@ Problem_5/
    PORT=8080
    MONGODB_URI=mongodb://localhost:27017/resource_db
    ```
+
+## Project structure
+Problem_5/
+│
+├── src/                          # Source code directory
+│   ├── app.ts                    # Express application setup
+│   ├── server.ts                 # Server entry point
+│   ├── config/                   # Configuration files
+│   │   └── db.config.ts          # Database connection configuration
+│   │
+│   ├── controllers/              # Request handlers
+│   │   └── resource.controller.ts # Resource CRUD operations
+│   │
+│   ├── models/                   # Database models
+│   │   └── resource.model.ts     # Resource schema and interface
+│   │
+│   ├── routes/                   # API routes
+│   │   └── resource.routes.ts    # Resource endpoints
+│   │
+│   ├── middleware/               # Custom middleware
+│   │   └── validation.middleware.ts # Input validation
+│   │
+│   ├── __tests__/                # Test directory
+│   │   ├── controllers/          # Controller unit tests
+│   │   │   └── resource_controller_test.ts
+│   │   ├── middleware/           # Middleware unit tests
+│   │   │   └── validation_middleware_test.ts
+│   │   ├── routes/               # Route tests
+│   │   │   └── resource_routes_test.ts
+│
+├── dist/                         # Compiled JavaScript output (generated after build)
+│
+├── node_modules/                 # Node.js dependencies (generated after npm install)
+│
+├── .env                          # Environment variables (to be created)
+├── .env.example                  # Example environment variables
+├── .gitignore                    # Git ignore file
+├── package.json                  # Project metadata and dependencies
+├── tsconfig.json                 # TypeScript configuration
+├── jest-config.js                # TypeScript and test coverage settings
+└── README.md                     # Project documentation
+
 
 ## Database Setup
 
