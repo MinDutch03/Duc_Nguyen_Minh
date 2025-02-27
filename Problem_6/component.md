@@ -24,9 +24,9 @@ graph TB
     WebSocketManager -->|8. Real-time Updates| Client
     CacheManager -.->|Cached Reads| DB
     
-    classDef primary fill:#f9f,stroke:#333,stroke-width:2px
-    classDef secondary fill:#bbf,stroke:#333,stroke-width:1px
-    classDef external fill:#fbb,stroke:#333,stroke-width:1px
+    classDef primary fill:#d73a4a,stroke:#333,stroke-width:2px,color:white
+    classDef secondary fill:#0366d6,stroke:#333,stroke-width:1px,color:white
+    classDef external fill:#6f42c1,stroke:#333,stroke-width:1px,color:white
     
     class ScoreService,WebSocketManager,RateLimiter,CacheManager primary
     class APIGateway,AuthService secondary
